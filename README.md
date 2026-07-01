@@ -24,7 +24,6 @@ This is a clean-room rewrite in Python with a fresh codebase and architecture.
 - Manga sync support
 - Custom sync schedules per list type
 - Webhooks for sync notifications
-- Web UI for configuration and monitoring
 
 ## Quick Start (Deployment)
 
@@ -60,12 +59,12 @@ docker-compose up -d
 
 **Option B: Unraid**
 
-- **Via Community Applications** (template not yet merged into CA Apps): Search for "AniList MAL Sync"
+- **Via Community Applications**: Search for "AniList MAL Sync" in the Community Apps store
 - **Manual Install**: Copy `anilist-mal-sync.xml` from this repo to `/boot/config/plugins/dockerMan/templates-user/` on your Unraid server
 
 ### 3. Configure
 
-The container creates `data/config.yaml` on first run. Edit it with your credentials:
+The container creates `data/config.yaml` on first run. You can edit it through the **Web UI** at `http://YOUR-SERVER-IP:8080` (recommended) or directly on the filesystem:
 
 ```bash
 nano data/config.yaml  # Or your preferred editor

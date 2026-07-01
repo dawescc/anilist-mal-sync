@@ -21,7 +21,7 @@ HEALTHCHECK --interval=5m --timeout=10s --start-period=10s --retries=3 \
 
 # Add Unraid labels for WebUI
 LABEL net.unraid.docker.webui="http://[IP]:[PORT:8080]"
-LABEL net.unraid.docker.icon="https://raw.githubusercontent.com/Tareku99/anilist-mal-sync/main/icon.png"
+LABEL net.unraid.docker.icon="https://raw.githubusercontent.com/Tareku99/anilist-mal-sync/main/src/anilist_mal_sync/assets/icon.png"
 
 # Run sync service with web UI (default mode)
 CMD ["anilist-mal-sync", "run"]

@@ -49,3 +49,5 @@ OAUTH*.md
 # OS
 .DS_Store
 Thumbs.db
+.aider*
+.continue/rules/project-context.md
