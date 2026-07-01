@@ -64,7 +64,7 @@ docker-compose up -d
 
 ### 3. Configure
 
-The container creates `data/config.yaml` on first run. You can edit it through the **Web UI** at `http://YOUR-SERVER-IP:8080` (recommended) or directly on the filesystem:
+The container creates `data/config.yaml` on first run. You can edit it through the **Web UI** at `http://YOUR-SERVER-IP:23080` (recommended) or directly on the filesystem:
 
 ```bash
 nano data/config.yaml  # Or your preferred editor
@@ -109,7 +109,7 @@ Check container logs for OAuth URLs, open them in your browser to authorize, and
 Once running, access the web dashboard at:
 
 ```
-http://YOUR-SERVER-IP:8080
+http://YOUR-SERVER-IP:23080
 ```
 
 The web UI provides:
@@ -192,7 +192,7 @@ Use --once for single sync, --no-web-ui for headless mode.
 - `--log-level` (default: INFO) Options: DEBUG, INFO, WARNING, ERROR - Logging level
 - `--once` - Run sync once and exit (no web UI, no continuous loop)
 - `--no-web-ui` - Disable web UI (continuous sync only)
-- `--port` (default: 8080) - Web UI port (default: 8080)
+- `--port` (default: 23080) - Web UI port (default: 23080)
 - `--host` (default: 0.0.0.0) - Web UI host
 
 ```bash
@@ -423,3 +423,11 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 - **[SECURITY.md](SECURITY.md)** - Security policy and vulnerability reporting
 - **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Community guidelines
 - **[LICENSE](LICENSE)** - MIT License
+
+## Support the Project
+
+If you find this project useful, consider supporting its development:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/tareku)
+
+[Buy me a coffee on Ko-fi](https://ko-fi.com/tareku) ☕

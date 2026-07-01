@@ -67,7 +67,7 @@ When deploying or using this project:
    - Keep the Docker image updated to the latest version
 
 6. **Network Security**
-   - If exposing the web UI (port 8080), consider using a reverse proxy with authentication
+   - If exposing the web UI (port 23080), consider using a reverse proxy with authentication
    - The OAuth callback port (18080) should only be accessible during initial setup
    - Consider firewall rules to restrict access to the OAuth callback port
 
@@ -102,11 +102,11 @@ When deploying or using this project:
 - **Volume Mounts**: The `data/` directory is mounted as a volume - ensure host permissions are secure
 - **Network**: Container needs outbound HTTPS access to `anilist.co` and `myanimelist.net`
 - **Ports**: 
-  - `8080` (web UI) - consider restricting access
+   - `23080` (web UI) - consider restricting access
   - `18080` (OAuth callback) - should only be accessible during setup
 
 #### Web UI Security
-- **No Authentication**: The web UI (port 8080) currently has no authentication - restrict network access
+- **No Authentication**: The web UI (port 23080) currently has no authentication - restrict network access
 - **Local Access Only**: Recommended to only expose on localhost or use a reverse proxy with authentication
 - **Configuration Editing**: The web UI can edit `config.yaml` - ensure proper access controls
 
