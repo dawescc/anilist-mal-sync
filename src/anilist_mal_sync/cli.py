@@ -159,8 +159,8 @@ def auth(service: str):
 @click.option(
     "--interval",
     type=int,
-    default=DEFAULT_SYNC_INTERVAL_MINUTES,
-    help=f"Sync interval in minutes (default: {DEFAULT_SYNC_INTERVAL_MINUTES} = 6 hours)",
+    default=None,
+    help=f"Sync interval in minutes (default: from config or {DEFAULT_SYNC_INTERVAL_MINUTES} = 6 hours)",
 )
 @click.option(
     "--log-level",
@@ -222,8 +222,9 @@ def run(mode: str, dry_run: bool, interval: int, log_level: str, once: bool, no_
             sys.exit(1)
     
     # Default or --no-web-ui: Continuous sync loop
-    interval_seconds = interval * 60
     settings = get_settings()
+    interval = interval or settings.sync_interval
+    interval_seconds = interval * 60
     
     logger.info("="*60)
     logger.info("Starting AniList-MAL Sync Service")

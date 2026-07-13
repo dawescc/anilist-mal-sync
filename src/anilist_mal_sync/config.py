@@ -61,6 +61,7 @@ class SyncConfig(BaseModel):
     """Synchronization settings."""
     mode: str = "bidirectional"
     score_sync_mode: str = "auto"
+    interval: int = 360
     dry_run: bool = False
     log_level: str = "INFO"
 
@@ -140,6 +141,7 @@ class Settings:
             
             self.sync_mode = config.sync.mode
             self.score_sync_mode = config.sync.score_sync_mode
+            self.sync_interval = config.sync.interval
             self.dry_run = config.sync.dry_run
             self.log_level = config.sync.log_level
             
